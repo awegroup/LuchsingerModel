@@ -1,7 +1,7 @@
 # Luchsinger's performance model of a pumping kite system accounting for tether elevation angle
 
 ## Model purpose
-Preliminary sizing of the pumping kite system.
+Preliminary sizing of a pumping kite system on Mars.
 
 ## Build Status
 * Model is complete, but the sequence of execution is not optimal making the model finish very slowly.
