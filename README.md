@@ -45,6 +45,6 @@ This project is licensed under the Apache License - see the [LICENSE](LICENSE) f
 
 ## References
 
-[1] Luchsinger mechanical power:R.H. Luchsinger: “Pumping cycle kite power”. In U. Ahrens, M. Diehl, and R. Schmehl (eds), Airborne Wind Energy, Green Energy and Technology, chapter 3, pages 47–64. Springer, Berlin Heidelberg, 2013. https://doi.org/10.1007/9783642399657_3
+[1] R.H. Luchsinger: “Pumping cycle kite power”. In U. Ahrens, M. Diehl, and R. Schmehl (eds), Airborne Wind Energy, Green Energy and Technology, chapter 3, pages 47–64. Springer, Berlin Heidelberg, 2013. https://doi.org/10.1007/9783642399657_3
 
-[2] Ground station losses: U. Fechner, R. Schmehl: “Model-Based Efficiency Analysis of Wind Power Conversion by a Pumping Kite Power System”. In U. Ahrens, M. Diehl, and R. Schmehl (eds), Airborne Wind Energy, Green Energy and Technology, chapter 14, pages 249–270. Springer, Berlin Heidelberg, 2013. https://doi.org/10.1007/9783642399657_14
+[2] U. Fechner, R. Schmehl: “Model-Based Efficiency Analysis of Wind Power Conversion by a Pumping Kite Power System”. In U. Ahrens, M. Diehl, and R. Schmehl (eds), Airborne Wind Energy, Green Energy and Technology, chapter 14, pages 249–270. Springer, Berlin Heidelberg, 2013. https://doi.org/10.1007/9783642399657_14
