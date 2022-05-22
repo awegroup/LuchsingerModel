@@ -27,6 +27,9 @@ Required Python packages might need to be installed.
 * Option 1 produces a power curve for the year for a kite (combined results shown [here](doc/Wind_power_for_kites.png)).
 * Option 2 produces operational evenvelope of pumping kite for sols (combined results shown [here](doc/Operational_envelope_kite.png)).
 
+## Results
+The use of the model and the generated results are described in more detail in [3] and [4].
+
 ## Possible contributions   
 * Instead of evaluating the complete state of each sol one after another, it will be faster if some steps are done for a year.
 * Examples: instead of updating the density of each sol though the python classes, a value from a list with 669 points should be used.
