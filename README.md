@@ -28,7 +28,7 @@ Required Python packages might need to be installed.
 * Option 2 produces operational evenvelope of pumping kite for sols (combined results shown [here](doc/Operational_envelope_kite.png)).
 
 ## Results
-The use of the model and the generated results are described in more detail in [3] and [4].
+The use of the model and the generated results are described in more detail in [3] and [4]. A follow-up study is presented in [5].
 
 ## Possible contributions   
 * Instead of evaluating the complete state of each sol one after another, it will be faster if some steps are done for a year.
@@ -54,3 +54,5 @@ This project is licensed under the Apache License - see the [LICENSE](LICENSE) f
 [3] L. Ouroumova, D. Witte, B. Klootwijk, E. Terwindt, F. van Marion, D. Mordasov, F. Corte Vargas, S. Heidweiller, M. Géczi, M. Kempers, R. Schmehl: “Combined Airborne Wind and Photovoltaic Energy System for Martian Habitats”. In: Spool 8.2 (2021), pp. 71–85. http://doi.org/10.7480/spool.2021.2.6058
 
 [4] F. Corte Vargas, M. Géczi, S. Heidweiller, M.X. Kempers, B.J. Klootwijk, F. van Marion, D. Mordasov, L.H. Ouroumova, E.N. Terwindt, D. Witte: "Arcadian Renewable Energy System: Renewable Energy for Mars Habitat". BSc Thesis, Faculty of Aerospace Engineering, Delft University of Technology, 2020. http://resolver.tudelft.nl/uuid:93c343e5-ee79-4320-98a3-949d3e9c407d
+
+[5] D. Gül, A. Popescu Cabo, M. Caruso, M. de Lange, V. Isidorova, K. Tiagoo, L. Sanders, T. Meyer Ranneft, W. van der Klugt, B. Sambath: "AWESOM: Airborne Wind Energy System on Mars". BSc Thesis, Faculty of Aerospace Engineering, Delft University of Technology, 2021. http://resolver.tudelft.nl/uuid:0298b063-7632-43f4-afa5-4065376df713
