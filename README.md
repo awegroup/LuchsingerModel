@@ -36,7 +36,7 @@ The use of the model and the generated results are described in more detail in [
 * Instead of updating the k and u Weibull parameters of each sol though the python classes, a value from a list with 669 points should be used.
 
 ## Credits
-TU Delft DSE group 23 of 2020 created the first version of this model.
+TU Delft DSE group 23 of 2020 created the first version of this model [4].
 
 ## Authors
 Lora Ouroumova
