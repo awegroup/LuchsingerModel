@@ -4,9 +4,8 @@
 Preliminary sizing of a pumping kite system on Mars.
 
 ## Build Status
-* Model is complete, but the sequence of execution is not optimal making the model finish very slowly.
-* Having 669 sols is hard codded in the model.
-* It needs to be manually changed for it to simulate 365 days on Earth.
+* Model is complete, but the sequence of execution is not optimal making the model slow.
+* Having 669 sols (days on Mars) is hard coded in the model, requiring manual changes to simulate 365 days on Earth.
 * The parameters and methods description is not up to date.
 
 ## Features
