@@ -48,6 +48,6 @@ This project is licensed under the Apache License - see the [LICENSE](LICENSE) f
 
 [2] U. Fechner, R. Schmehl: “Model-Based Efficiency Analysis of Wind Power Conversion by a Pumping Kite Power System”. In U. Ahrens, M. Diehl, and R. Schmehl (eds), Airborne Wind Energy, Green Energy and Technology, chapter 14, pages 249–270. Springer, Berlin Heidelberg, 2013. https://doi.org/10.1007/9783642399657_14
 
-[3] L. Ouroumova, D. Witte, B. Klootwijk, E.bTerwindt, F. van Marion, D. Mordasov, F. Corte Vargas, S. Heidweiller, M. Géczi, M. Kempers, R. Schmehl: “Combined Airborne Wind and Photovoltaic Energy System for Martian Habitats”. In: Spool 8.2 (2021), pp. 71–85. http://doi.org/10.7480/spool.2021.2.6058
+[3] L. Ouroumova, D. Witte, B. Klootwijk, E. Terwindt, F. van Marion, D. Mordasov, F. Corte Vargas, S. Heidweiller, M. Géczi, M. Kempers, R. Schmehl: “Combined Airborne Wind and Photovoltaic Energy System for Martian Habitats”. In: Spool 8.2 (2021), pp. 71–85. http://doi.org/10.7480/spool.2021.2.6058
 
-[4] Corte Vargas, F., Géczi, M., Heidweiller, S., Kempers, M.X., Klootwijk, B.J., van Marion, F., Mordasov, D., Ouroumova, L.H., Terwindt, E.N., Witte, D. (2020) Arcadian Renewable Energy System: Renewable Energy for Mars Habitat [Technical report]. Faculty of Aerospace Engineering, Delft University of Technology. http://resolver.tudelft.nl/uuid:93c343e5-ee79-4320-98a3-949d3e9c407d
+[4] F. Corte Vargas, M. Géczi, S. Heidweiller, M.X. Kempers, B.J. Klootwijk, F. van Marion, D. Mordasov, L.H. Ouroumova, E.N. Terwindt, D. Witte: "Arcadian Renewable Energy System: Renewable Energy for Mars Habitat". BSc Thesis, Faculty of Aerospace Engineering, Delft University of Technology, 2020. http://resolver.tudelft.nl/uuid:93c343e5-ee79-4320-98a3-949d3e9c407d
