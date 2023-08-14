@@ -20,8 +20,8 @@ class Input:
         self.cut_in_v_w = 6
         self.cut_out_v_w = 40
         # Relevant only for energy losses
-        self.phi_in = 45. * np.pi / 180
-        self.phi_out = 25. * np.pi / 180.
+        self.beta_in = 45. * np.pi / 180
+        self.beta_out = 25. * np.pi / 180.
 
 
         # #Input for a 250m^2 kite
@@ -38,8 +38,8 @@ class Input:
         self.cut_out_v_w = 40
 
         # Relevant only for energy losses
-        self.phi_in = 45. * np.pi / 180
-        self.phi_out = 25. * np.pi / 180.
+        self.beta_in = 45. * np.pi / 180
+        self.beta_out = 25. * np.pi / 180.
 
         # #Input for a 200m^2 kite
         # self.projected_area = 200
@@ -55,8 +55,8 @@ class Input:
         # self.cut_out_v_w = 40
         #
         # # Relevant only for energy losses
-        # self.phi_in = 45. * np.pi / 180
-        # self.phi_out = 25. * np.pi / 180.
+        # self.beta_in = 45. * np.pi / 180
+        # self.beta_out = 25. * np.pi / 180.
 
         # #
         # #Input for a 165^2 kite
@@ -68,8 +68,8 @@ class Input:
         # # Based on wind resource availability
         # self.cut_in_v_w = 6
         # self.cut_out_v_w = 40
-        # self.phi_in = 45. * np.pi / 180
-        # self.phi_out = 25. * np.pi / 180.
+        # self.beta_in = 45. * np.pi / 180
+        # self.beta_out = 25. * np.pi / 180.
 
         # #Input for a 150^2 kite
         # self.projected_area = 150
@@ -80,8 +80,8 @@ class Input:
         # # Based on wind resource availability
         # self.cut_in_v_w = 6
         # self.cut_out_v_w = 40
-        # self.phi_in = 45. * np.pi / 180
-        # self.phi_out = 25. * np.pi / 180.
+        # self.beta_in = 45. * np.pi / 180
+        # self.beta_out = 25. * np.pi / 180.
 
 
         # # Input for a 100m^2 kite
@@ -93,8 +93,8 @@ class Input:
         # # Based on wind resource availability
         # self.cut_in_v_w = 10
         # self.cut_out_v_w = 40
-        # self.phi_in = 45. * np.pi / 180
-        # self.phi_out = 25. * np.pi / 180.
+        # self.beta_in = 45. * np.pi / 180
+        # self.beta_out = 25. * np.pi / 180.
 
 
         # #Input for a 50m^2 kite
@@ -107,8 +107,8 @@ class Input:
         # self.cut_in_v_w = 6
         # self.cut_out_v_w = 40
         # # Relevant only for energy losses
-        # self.phi_in = 45. * np.pi / 180
-        # self.phi_out = 25. * np.pi / 180.
+        # self.beta_in = 45. * np.pi / 180
+        # self.beta_out = 25. * np.pi / 180.
 
         self.drum_outer_radius = 0.50
         self.drum_inner_radius = 0.49
@@ -128,14 +128,12 @@ class Input:
             self.reel_in_speed_limit ={self.reel_in_speed_limit}\n\
             self.cut_in_v_w = {self.cut_in_v_w}\n\
             self.cut_out_v_w = {self.cut_out_v_w}\n\
-            self.phi_in = {self.phi_in}\n\
-            self.phi_out = {self.phi_out}\n\
+            self.beta_in = {self.beta_in}\n\
+            self.beta_out = {self.beta_out}\n\
             number of periods = {len(self.k_list)}\n\
             ######################################")
 
         # Values for ref location
         # self.u_list = [14.208, 18.152, 16.884, 14.976]
         # self.k_list = [2.745, 2.954, 2.645, 2.769]
-        # self.density_file = "density_MO_MCD.txt"
-
-
+        # self.density_file = "density_MO_MCD.txt"

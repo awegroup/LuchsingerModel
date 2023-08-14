@@ -143,7 +143,7 @@ class Cycle():
             def objective_function(x):
                 gamma_out = x[0]
                 gamma_in = x[1]
-                f_c = ((np.cos(system.phi_out) - gamma_out) ** 2 - (self.f_in / self.f_out) * (1 + 2*np.cos(system.phi_in)*gamma_in+gamma_in**2) ) * \
+                f_c = ((np.cos(system.beta_out) - gamma_out) ** 2 - (self.f_in / self.f_out) * (1 + 2*np.cos(system.beta_in)*gamma_in+gamma_in**2) ) * \
                       ((gamma_out * gamma_in) / (gamma_out + gamma_in))
                 return -f_c
 
@@ -159,7 +159,7 @@ class Cycle():
             v_in = v_w * gamma_in
 
             tether_force_out = 0.5 * density * (v_w ** 2) * \
-                                    system.projected_area * ((np.cos(system.phi_out) - gamma_out) ** 2) * self.f_out
+                                    system.projected_area * ((np.cos(system.beta_out) - gamma_out) ** 2) * self.f_out
 
             if gamma_out <= 0 or round( gamma_in,3)>round(self.gamma_in_max,3) or round( gamma_out,3)>round(self.gamma_out_max,3):
                 print("R1")
@@ -185,7 +185,7 @@ class Cycle():
                     # print("nominal_gamma_out_t while loop counter at ", loop2)
                     nominal_gamma_out_t =  nominal_gamma_out_t0
 
-                    nominal_v_w_t0 = np.sqrt(system.nominal_tether_force / 0.5 / density / system.projected_area / ((np.cos(system.phi_out) -  nominal_gamma_out_t) ** 2) /  self.f_out)
+                    nominal_v_w_t0 = np.sqrt(system.nominal_tether_force / 0.5 / density / system.projected_area / ((np.cos(system.beta_out) -  nominal_gamma_out_t) ** 2) /  self.f_out)
                     nominal_gamma_out_t0 = v_out/nominal_v_w_t0
 
                     # print(nominal_v_w_t0 ,"self.nominal_v_w_t0 ")
@@ -224,8 +224,8 @@ class Cycle():
 
             mu = v_w /  self.nominal_v_w_t
 
-            self.gamma_out = np.cos(system.phi_out) - ((np.cos(system.phi_out) - self.nominal_gamma_out_t) / mu)
-            self.v_out = v_w*np.cos(system.phi_out) - self.nominal_v_w_t*np.cos(system.phi_out) + self.nominal_gamma_out_t * self.nominal_v_w_t
+            self.gamma_out = np.cos(system.beta_out) - ((np.cos(system.beta_out) - self.nominal_gamma_out_t) / mu)
+            self.v_out = v_w*np.cos(system.beta_out) - self.nominal_v_w_t*np.cos(system.beta_out) + self.nominal_gamma_out_t * self.nominal_v_w_t
 
             self.torque_out = self.tether_force_out * system.drum_outer_radius
             self.rpm_out = (self.v_out / system.drum_outer_radius) * 60 / (2 * np.pi)
@@ -253,7 +253,7 @@ class Cycle():
                     # print("nominal_gamma_out_p while loop counter at ", loop2)
                     nominal_gamma_out_p =  nominal_gamma_out_p0
 
-                    nominal_v_w_p0 = np.sqrt(system.nominal_tether_force / 0.5 / density / system.projected_area / ((np.cos(system.phi_out) -  nominal_gamma_out_p0) ** 2) /  self.f_out)
+                    nominal_v_w_p0 = np.sqrt(system.nominal_tether_force / 0.5 / density / system.projected_area / ((np.cos(system.beta_out) -  nominal_gamma_out_p0) ** 2) /  self.f_out)
                     self.v_out = system.v_out_nominal_p
                     nominal_gamma_out_p0  = self.v_out/nominal_v_w_p0
 
@@ -287,7 +287,7 @@ class Cycle():
             def objective_function(x):
                 gamma_out = x[0]
                 gamma_in = x[1]
-                f_c = ((np.cos(system.phi_out) - gamma_out) ** 2 - (self.f_in / self.f_out) * (1 + 2*np.cos(system.phi_in)*gamma_in+ gamma_in ** 2)) * \
+                f_c = ((np.cos(system.beta_out) - gamma_out) ** 2 - (self.f_in / self.f_out) * (1 + 2*np.cos(system.beta_in)*gamma_in+ gamma_in ** 2)) * \
                       ((gamma_out * gamma_in) / (gamma_out + gamma_in))
                 return -f_c
 
@@ -305,12 +305,12 @@ class Cycle():
             self.v_in = environment.v_w * self.gamma_in
 
             self.tether_force_out = 0.5 * environment.rho * (environment.v_w ** 2) * \
-                                    system.projected_area * ((np.cos(system.phi_out) - self.gamma_out) ** 2) * self.f_out
+                                    system.projected_area * ((np.cos(system.beta_out) - self.gamma_out) ** 2) * self.f_out
             self.torque_out = self.tether_force_out * system.drum_outer_radius
             self.rpm_out = (self.v_out / system.drum_outer_radius) * 60 / (2 * np.pi)
 
             self.tether_force_in = 0.5 * environment.rho * (environment.v_w ** 2) * \
-                                   system.projected_area * (1 + 2*np.cos(system.phi_in)*self.gamma_in+ self.gamma_in ** 2) * self.f_in
+                                   system.projected_area * (1 + 2*np.cos(system.beta_in)*self.gamma_in+ self.gamma_in ** 2) * self.f_in
             self.torque_in = self.tether_force_in * system.drum_outer_radius
             self.rpm_in = (self.v_in / system.drum_outer_radius) * 60 / (2 * np.pi)
 
@@ -351,9 +351,9 @@ class Cycle():
 
             self.mu = environment.v_w / self.nominal_v_w_t
 
-            self.gamma_out = np.cos(system.phi_out) - ((np.cos(system.phi_out) - self.nominal_gamma_out_t) / self.mu)
-            self.v_out = environment.v_w * np.cos(system.phi_out) - self.nominal_v_w_t * np.cos(
-                system.phi_out) + self.nominal_gamma_out_t * self.nominal_v_w_t
+            self.gamma_out = np.cos(system.beta_out) - ((np.cos(system.beta_out) - self.nominal_gamma_out_t) / self.mu)
+            self.v_out = environment.v_w * np.cos(system.beta_out) - self.nominal_v_w_t * np.cos(
+                system.beta_out) + self.nominal_gamma_out_t * self.nominal_v_w_t
 
             self.tether_force_out = system.nominal_tether_force
             self.torque_out = self.tether_force_out * system.drum_outer_radius
@@ -361,8 +361,8 @@ class Cycle():
 
             def objective_function(x):
                 gamma_in = x[0]
-                f_c_2 = ((1 / (self.mu ** 2)) * (np.cos(system.phi_out) - self.nominal_gamma_out_t) ** 2 - (self.f_in / self.f_out) * (1 + 2*np.cos(system.phi_in)*gamma_in+ gamma_in ** 2)) * \
-                        ((gamma_in * (self.mu *np.cos(system.phi_out)- np.cos(system.phi_out) + self.nominal_gamma_out_t)) / (self.mu * gamma_in + self.mu *np.cos(system.phi_out)- np.cos(system.phi_out) + self.nominal_gamma_out_t))
+                f_c_2 = ((1 / (self.mu ** 2)) * (np.cos(system.beta_out) - self.nominal_gamma_out_t) ** 2 - (self.f_in / self.f_out) * (1 + 2*np.cos(system.beta_in)*gamma_in+ gamma_in ** 2)) * \
+                        ((gamma_in * (self.mu *np.cos(system.beta_out)- np.cos(system.beta_out) + self.nominal_gamma_out_t)) / (self.mu * gamma_in + self.mu *np.cos(system.beta_out)- np.cos(system.beta_out) + self.nominal_gamma_out_t))
                 return -f_c_2
 
             starting_point = (0.001)
@@ -374,7 +374,7 @@ class Cycle():
             self.v_in = environment.v_w * self.gamma_in
             self.tether_force_in = 0.5 * environment.rho * (environment.v_w ** 2) * \
                                    system.projected_area * (1 + 2 * np.cos(
-                system.phi_in) * self.gamma_in + self.gamma_in ** 2) * self.f_in
+                system.beta_in) * self.gamma_in + self.gamma_in ** 2) * self.f_in
             self.torque_in = self.tether_force_in * system.drum_outer_radius
             self.rpm_in = (self.v_in / system.drum_outer_radius) * 60 / (2 * np.pi)
 
@@ -421,7 +421,7 @@ class Cycle():
 
             def objective_function(x):
                 gamma_in = x[0]
-                f_c_3 = ((1 / (self.mu ** 2)) * (np.cos(system.phi_out) - self.nominal_gamma_out_t) ** 2 - (self.f_in / self.f_out) * (1 + 2*np.cos(system.phi_in)*gamma_in+ gamma_in ** 2)) * \
+                f_c_3 = ((1 / (self.mu ** 2)) * (np.cos(system.beta_out) - self.nominal_gamma_out_t) ** 2 - (self.f_in / self.f_out) * (1 + 2*np.cos(system.beta_in)*gamma_in+ gamma_in ** 2)) * \
                         ((self.nominal_gamma_out_p * gamma_in) / (self.nominal_gamma_out_p + self.mu * gamma_in))
                 return -f_c_3
 
@@ -434,7 +434,7 @@ class Cycle():
             self.v_in = environment.v_w * self.gamma_in
             self.tether_force_in = 0.5 * environment.rho * (environment.v_w ** 2) * \
                                    system.projected_area * (1 + 2 * np.cos(
-                system.phi_in) * self.gamma_in + self.gamma_in ** 2) * self.f_in
+                system.beta_in) * self.gamma_in + self.gamma_in ** 2) * self.f_in
             self.torque_in = self.tether_force_in * system.drum_outer_radius
             self.rpm_in = (self.v_in / system.drum_outer_radius) * 60 / (2 * np.pi)
             self.calculate_motor_eta(system)
@@ -452,6 +452,4 @@ class Cycle():
                 self.cycle_max_time = self.cycle_in_time
 
         if self.cycle_power < 0:
-            self.cycle_power = 0
-
-
+            self.cycle_power = 0

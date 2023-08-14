@@ -294,7 +294,7 @@ def annual_calculation(s, e, graph=True):
         e.calculate_weibull_pdf(v_w,sol)
         c.run_simulation(s, e)
         return c.cycle_power*e.g_w
-    
+
     for sol in e.sols:
         # print("sol",sol)
         e.update_environment(sol)
@@ -314,12 +314,12 @@ def annual_calculation(s, e, graph=True):
 
         energy_mwh1[sol] = integrated_power1*24*1e-6
         # energy_mwh2[sol] = integrated_power2[0] * 24 * 1e-6
-        # energy_mwh1 *= np.cos(s.phi)**3
+        # energy_mwh1 *= np.cos(s.beta)**3
     power_sol = energy_mwh1 / 24 * 1e3
     # power_sol = integrated_power1
     name = "wind_energy_produced_AN_MCD_A" + str(s.projected_area) + "T" + str(
         round(s.nominal_tether_force, 0)) + "P" + str(round(s.nominal_generator_power, 0)) + "v" + str(
-        round(s.reel_in_speed_limit, 0)) + "bi" + str(round(s.phi_in / np.pi * 180, 0)) + ".csv"
+        round(s.reel_in_speed_limit, 0)) + "bi" + str(round(s.beta_in / np.pi * 180, 0)) + ".csv"
 
     np.savetxt(name, energy_mwh1, delimiter=",")
 
@@ -339,7 +339,7 @@ def annual_calculation(s, e, graph=True):
         sns.lineplot(x = e.sols, y = energy_mwh, color = "darkblue", ax=ax[1])
         ax[1].set(xlabel = "Sol", ylabel = "Energy Produced [MWh]")
         plt.subplots_adjust(bottom=0.1)
-    
+
     return energy_mwh
 
 

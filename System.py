@@ -102,7 +102,7 @@ class System(Kite, Tether):
         cut_out_v_w (float): Cut-out wind speed [m/s]
         nominal_tether_force (float): Maximum designed for tether force [N]
         nominal_generator_power (float): Maximum designed for generator power [W]
-        phi (float): Elevation angle [rad]
+        beta (float): Elevation angle [rad]
         overall_gs_efficiency (float): Overall ground-station mechanical-to-electrical\
             conversion efficiency
         drum_outer_radius (float): Outer radius of the drum on which the tether is wound [m]
@@ -151,8 +151,8 @@ class System(Kite, Tether):
         self.cut_in_v_w = input.cut_in_v_w
         self.cut_out_v_w = input.cut_out_v_w
 
-        self.phi_in = input.phi_in
-        self.phi_out = input.phi_out
+        self.beta_in = input.beta_in
+        self.beta_out = input.beta_out
 
         self.drum_outer_radius = input.drum_outer_radius
         self.drum_inner_radius = input.drum_inner_radius
@@ -189,7 +189,7 @@ class System(Kite, Tether):
                    0.25 * self.d_tether * self.operational_length * self.c_d_c * (1 / self.projected_area)
 
     def calculate_operational_height(self):
-        self.operational_height = np.sin(self.phi_out) * self.operational_length
+        self.operational_height = np.sin(self.beta_out) * self.operational_length
 
 
     def calculate_nominal_v_out_p(self):
