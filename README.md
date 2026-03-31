@@ -1,4 +1,4 @@
-❗ **NB: Archived because [reworked version](https://github.com/awecourse/resources) is available** ❗
+❗ **NB: Archived because [reworked version](https://github.com/awegroup/awe_on_mars) is available** ❗
 
 # Luchsinger's performance model of a pumping kite system accounting for tether elevation angle
 
